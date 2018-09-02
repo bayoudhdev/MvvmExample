@@ -1,11 +1,11 @@
 package naviacom.fr.mvvmdezzerexemple.webservices
 
-import com.bitbucket.stephenvinouze.betclicchallenge.webservices.interceptors.HeaderInterceptor
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import naviacom.fr.mvvmdezzerexemple.BuildConfig
 import naviacom.fr.mvvmdezzerexemple.webservices.apis.PlaylistAPI
 import naviacom.fr.mvvmdezzerexemple.webservices.apis.UserAPI
+import naviacom.fr.mvvmdezzerexemple.webservices.interceptors.HeaderInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

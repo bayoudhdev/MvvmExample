@@ -1,9 +1,9 @@
 package naviacom.fr.mvvmdezzerexemple.data
 
-import com.bitbucket.stephenvinouze.betclicchallenge.models.Playlist
-import com.bitbucket.stephenvinouze.betclicchallenge.models.Track
 import io.reactivex.Completable
 import io.reactivex.Observable
+import naviacom.fr.mvvmdezzerexemple.models.Playlist
+import naviacom.fr.mvvmdezzerexemple.models.Track
 import naviacom.fr.mvvmdezzerexemple.utils.schedulers.BaseSchedulerProvider
 import naviacom.fr.mvvmdezzerexemple.webservices.reponses.BaseResponse
 

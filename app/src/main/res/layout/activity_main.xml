@@ -20,6 +20,7 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/playlist_recyclerview"
             android:layout_width="match_parent"
@@ -43,5 +44,10 @@
             android:textStyle="italic"
             android:visibility="gone" />
 
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="@dimen/margin_30dp"
+            android:layout_height="@dimen/margin_30dp"
+            android:layout_centerInParent="true" />
     </RelativeLayout>
 </android.support.design.widget.CoordinatorLayout>

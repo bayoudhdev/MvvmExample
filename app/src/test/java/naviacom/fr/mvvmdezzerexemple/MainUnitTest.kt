@@ -1,17 +1,15 @@
 package naviacom.fr.mvvmdezzerexemple
 
-import com.bitbucket.stephenvinouze.betclicchallenge.models.Playlist
 import com.nhaarman.mockito_kotlin.doReturn
 import com.nhaarman.mockito_kotlin.mock
 import io.reactivex.Observable
 import io.reactivex.subscribers.TestSubscriber
 import naviacom.fr.mvvmdezzerexemple.activities.main.MainViewModel
 import naviacom.fr.mvvmdezzerexemple.data.PlayListRepository
+import naviacom.fr.mvvmdezzerexemple.models.Playlist
 import naviacom.fr.mvvmdezzerexemple.utils.schedulers.ImmediateSchedulerProvider
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
-import org.junit.rules.TestRule
 import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.MockitoAnnotations

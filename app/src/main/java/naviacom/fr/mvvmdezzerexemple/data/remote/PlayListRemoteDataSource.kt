@@ -1,12 +1,12 @@
 package naviacom.fr.mvvmdezzerexemple.data.remote
 
-import com.bitbucket.stephenvinouze.betclicchallenge.models.Playlist
-import com.bitbucket.stephenvinouze.betclicchallenge.models.Track
 import io.reactivex.Completable
 import io.reactivex.Completable.fromAction
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 import naviacom.fr.mvvmdezzerexemple.data.IPlayListDataSource
+import naviacom.fr.mvvmdezzerexemple.models.Playlist
+import naviacom.fr.mvvmdezzerexemple.models.Track
 import naviacom.fr.mvvmdezzerexemple.webservices.RequestManager
 import naviacom.fr.mvvmdezzerexemple.webservices.reponses.BaseResponse
 

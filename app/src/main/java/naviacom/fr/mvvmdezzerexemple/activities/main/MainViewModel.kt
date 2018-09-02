@@ -1,13 +1,13 @@
 package naviacom.fr.mvvmdezzerexemple.activities.main
 
-import com.bitbucket.stephenvinouze.betclicchallenge.models.Playlist
-import com.bitbucket.stephenvinouze.betclicchallenge.models.Track
 import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
-import naviacom.fr.mvvmdezzerexemple.data.PlayListRepository
-import naviacom.fr.mvvmdezzerexemple.utils.schedulers.BaseSchedulerProvider
 import io.reactivex.subjects.PublishSubject
 import naviacom.fr.mvvmdezzerexemple.R
+import naviacom.fr.mvvmdezzerexemple.data.PlayListRepository
+import naviacom.fr.mvvmdezzerexemple.models.Playlist
+import naviacom.fr.mvvmdezzerexemple.models.Track
+import naviacom.fr.mvvmdezzerexemple.utils.schedulers.BaseSchedulerProvider
 
 
 class MainViewModel(private val playListRepository: PlayListRepository
@@ -21,7 +21,7 @@ class MainViewModel(private val playListRepository: PlayListRepository
         return playListRepository.fetchPlayLists(userId, page).map { it.data }
                 .doOnSubscribe { mLoadingIndicatorSubject.onNext(true) }
                 .doOnNext { mLoadingIndicatorSubject.onNext(false)}
-                .doOnError { mSnackBarText.onNext(R.string.app_name) }
+                .doOnError { mSnackBarText.onNext(R.string.error_fetching_playlists_title) }
                 .subscribeOn(baseSchedulerProvider.computation())
                 .observeOn(baseSchedulerProvider.ui())
     }
@@ -30,7 +30,7 @@ class MainViewModel(private val playListRepository: PlayListRepository
         return playListRepository.fetchTracks(playlistId, index).map { it.data }
                 .doOnSubscribe { mLoadingIndicatorSubject.onNext(true) }
                 .doOnNext { mLoadingIndicatorSubject.onNext(false)}
-                .doOnError { mSnackBarText.onNext(R.string.app_name) }
+                .doOnError { mSnackBarText.onNext(R.string.error_fetching_tracks_title) }
                 .subscribeOn(baseSchedulerProvider.computation())
                 .observeOn(baseSchedulerProvider.ui())
     }
@@ -55,7 +55,7 @@ class MainViewModel(private val playListRepository: PlayListRepository
      * @return a stream of string ids that should be displayed in the snackbar.
      */
 
-    fun getSnackbarMessage(): Observable<Int> {
+    fun getSnackBarMessage(): Observable<Int> {
         return mSnackBarText
     }
 

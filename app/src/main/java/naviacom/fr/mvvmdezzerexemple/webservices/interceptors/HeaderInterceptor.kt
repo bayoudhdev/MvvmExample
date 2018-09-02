@@ -1,13 +1,11 @@
-package com.bitbucket.stephenvinouze.betclicchallenge.webservices.interceptors
+package naviacom.fr.mvvmdezzerexemple.webservices.interceptors
 
 import okhttp3.Interceptor
 import okhttp3.Response
 import java.io.IOException
 import java.util.*
 
-/**
- * Created by stephenvinouze on 10/10/2017.
- */
+
 class HeaderInterceptor : Interceptor {
 
     companion object {

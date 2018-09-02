@@ -1,4 +1,4 @@
-package com.bitbucket.stephenvinouze.betclicchallenge.models
+package naviacom.fr.mvvmdezzerexemple.models
 
 
 data class Playlist(

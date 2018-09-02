@@ -1,4 +1,4 @@
-package com.bitbucket.stephenvinouze.betclicchallenge.extensions
+package naviacom.fr.mvvmdezzerexemple.utils
 
 import java.util.*
 

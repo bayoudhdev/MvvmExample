@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">MvvmDezzerExemple</string>
+
     <string name="pick_user">Update user</string>
     <string name="from">By</string>
     <string name="track_count_zero">%d tracks</string>
