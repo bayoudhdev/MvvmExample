@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.support.annotation.StringRes
 import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Toast
 import com.trello.rxlifecycle2.RxLifecycle
@@ -43,9 +44,8 @@ class MainActivity : RxAppCompatActivity() {
         val schedulerProvider = SchedulerProvider.getInstance()
         mMainViewModel = MainViewModel(PlayListRepository
                 .getInstance(PlayListRemoteDataSource(), schedulerProvider), schedulerProvider)
-        playlist_recyclerview.layoutManager = GridLayoutManager(this, 2)
+        playlist_recyclerview.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         playlist_recyclerview.adapter = mMainViewAdapter
-
     }
 
 
@@ -68,6 +68,9 @@ class MainActivity : RxAppCompatActivity() {
         fetchPlayList()
     }
 
+    /**
+     * Method used to fetch list
+     */
     private fun fetchPlayList() {
         mMainViewModel.fetchPlayLists(userId = userId)
                 .compose(RxLifecycle.bindUntilEvent(this.lifecycle(), ActivityEvent.STOP))

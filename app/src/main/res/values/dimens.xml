@@ -24,4 +24,5 @@
     <dimen name="toolbar_cover_spacing">0dp</dimen>
     <dimen name="track_cover_size">60dp</dimen>
     <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
 </resources>

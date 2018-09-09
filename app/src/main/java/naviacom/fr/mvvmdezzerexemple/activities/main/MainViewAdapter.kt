@@ -5,15 +5,15 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import naviacom.fr.mvvmdezzerexemple.R
 import naviacom.fr.mvvmdezzerexemple.models.Playlist
-import naviacom.fr.mvvmdezzerexemple.utils.AutoUpdatableAdapter
 import kotlin.properties.Delegates
 
-class MainViewAdapter : RecyclerView.Adapter<MainViewHolder>(),AutoUpdatableAdapter {
+class MainViewAdapter : RecyclerView.Adapter<MainViewHolder>() {
 
-    var playLists: List<Playlist> by Delegates.observable(emptyList()) {
-        _, old, new ->
-        autoNotify(old, new) { o, n -> o.id == n.id }
-    }
+    var playLists: List<Playlist> = emptyList()
+         set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MainViewHolder {
         val rootView = LayoutInflater.from(parent!!.context).inflate(R.layout.item_playlist, parent, false)
