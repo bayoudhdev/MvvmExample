@@ -6,11 +6,12 @@ import kotlinx.android.synthetic.main.item_playlist.view.*
 import naviacom.fr.mvvmdezzerexemple.models.Playlist
 
 class MainViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
-    private val playListCover = itemView!!.playlist_cover
-    private val playListTitle = itemView!!.playlist_title
+
+    private val mPlayListCover = itemView!!.playlist_cover
+    private val mPlayListTitle = itemView!!.playlist_title
 
     fun bindItemView(playList: Playlist) {
-        playListTitle.text = playList.title
-        playListCover.setImageURI(playList.picture_medium)
+        mPlayListTitle.text = playList.title
+        mPlayListCover.setImageURI(playList.picture_medium)
     }
 }
