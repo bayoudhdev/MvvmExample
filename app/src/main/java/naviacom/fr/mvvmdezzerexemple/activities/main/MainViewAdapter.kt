@@ -13,7 +13,6 @@ class MainViewAdapter : RecyclerView.Adapter<MainViewHolder>() {
          set(value) {
             field = value
             notifyDataSetChanged()
-
         }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): MainViewHolder {
