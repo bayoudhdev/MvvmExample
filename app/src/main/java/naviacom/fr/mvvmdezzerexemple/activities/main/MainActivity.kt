@@ -68,6 +68,9 @@ class MainActivity : RxAppCompatActivity() {
         fetchPlayList()
     }
 
+    /**
+     * Method used to fetch list
+     */
     private fun fetchPlayList() {
         mMainViewModel.fetchPlayLists(userId = userId)
                 .compose(RxLifecycle.bindUntilEvent(this.lifecycle(), ActivityEvent.STOP))
